@@ -6,8 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('images/bg.jpg');
+  background: url('./images/bg.jpg');
   background-size: cover;
+
 }
 
 code {
@@ -17,13 +18,19 @@ code {
 /*--------banner----*/
 .banner {
   height: 130px;
- background-color:aqua; 
+  /* background: url('images/banner.jpg');    */
+  background: url('./images/banner.jpg');   
+  /* background: url('WhatsApp\ Image\ 2022-11-16\ at\ 9.40.49\ PM.jpeg');    */
+  /* background-color: magenta; */
   background-size: cover;
   align-content: left;
+  width: 100%;
 }
 /*----banner second image------*/
 .logo2{
+  /* background: url('images/gold.jpg');    */
   width: 600px;
+  background-size: cover;
 }
 .logo{
   padding-top: 0px;
@@ -36,7 +43,6 @@ code {
   background: url('');
 }
 .text{
-  padding-top: 80px;
   color: rgb(234, 16, 16);
   text-shadow: #fff;
 }
@@ -118,7 +124,20 @@ code {
   padding: 0px;
   overflow: hidden;
 }
-  
+  .header_content {
+    width: 215px;
+    color: rgb(207, 81, 81);
+  }
+
+    .header__title {
+      font-size: 22px;
+      font-weight: 700;
+      
+    }
+
+    .header__desc {
+      font-weight: 400;
+    }
   
 
 .headertitle {
@@ -140,7 +159,7 @@ code {
 /* --------NAV Main page-----*/
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgb(165, 245, 68);
+ 
   overflow: hidden;
   
 }
@@ -229,13 +248,30 @@ code {
   }
   .heading
 {
-    background-color: white;
+    font-weight: bold;
     width: 17rem;
 }
 .customerHeading
 {
     background-color: white;
     width: 22rem;
+}
+.banner2{
+  color: aqua;
+}
+.mainfooter{
+  background-color:dimgray;
+}
+.text2{
+  color: lime;
+}
+.nextsection{
+  background-color:rgb(212, 128, 245);
+  /* background: url('green_download\ \(1\).jpeg');    */
+}
+.main3{
+  background: url('./images/main3.jpg'); 
+  /* background: url('back.jpeg'); */
 }
   /*--------end-----------*/
   

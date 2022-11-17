@@ -13,7 +13,8 @@ const UpdateCustomer = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
 
     const updateCustomer = (customer) => {
-        CustomerService.updateCustomer(customer).then(response => {
+        const customerInfo={customerId:id,username:customer.username,password:customer.password,email:customer.email,mobileNumber:customer.mobileNumber,address:customer.address};
+        CustomerService.updateCustomer(customerInfo).then(response => {
             if(response.status === 200){
                 setMessage("Customer Updated Successfully");
             }
@@ -22,10 +23,9 @@ const UpdateCustomer = () => {
     useEffect(() => {
         CustomerService.getCustomer(id).then(response => {
             setCustomer(response.data);
-         //   alert(document.getElementById("customerId"));
-        //    alert(document.getElementById('customerId').value);
+       
             document.getElementById('customerId').value=response.data.customerId;
-        //     alert(document.getElementById('customerId').value);
+     
             document.getElementById('username').value=response.data.username;
             document.getElementById('password').value=response.data.password;
             document.getElementById('email').value=response.data.email;
@@ -103,7 +103,7 @@ const UpdateCustomer = () => {
                             <label htmlFor="">Phone Number: </label>
                             <input 
                                 className="form-control" 
-                                type="number" 
+                                type="text" 
                                 id="mobileNumber"
                                
                                 { ...register("mobileNumber", {required: true, minLength:10, maxLength:10 }) }    

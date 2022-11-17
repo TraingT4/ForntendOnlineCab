@@ -21,8 +21,8 @@ class CustomerService {
         return axios.delete(apiPath+"/"+id);
     }
 
-    updateCustomer(id, customer){
-        return axios.put(apiPath+"/"+id, customer);
+    updateCustomer( customer){
+        return axios.put(apiPath+"/", customer);
     }
 }
 export default new CustomerService;

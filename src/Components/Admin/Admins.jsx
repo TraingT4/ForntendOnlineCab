@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import AdminService from "../Services/AdminService";
-import Menu from "./Menu";
+import AdminService from "../../Services/AdminService";
+import Menu from "./../Home/Menu";
 
 const Admins = () => {
     const [admins, setAdmins] = useState([]);

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {useForm} from 'react-hook-form';
-import AdminService from "../Services/AdminService";
-import Menu from './Menu';
+import AdminService from "../../Services/AdminService";
+import Menu from './../Home/Menu';
 
 const AddAdmin = () => {
     let [message, setMessage] = useState("");
@@ -9,8 +9,9 @@ const AddAdmin = () => {
 
     const addCustomer = (admin) => {
 
-        alert(JSON.stringify(admin));
-        AdminService.saveAdmin(admin).then(response => {
+        
+        const adminInfo={username:admin.name,password:admin.password,email:admin.email,mobileNumber:admin.mobileNumber,address:admin.address};
+        AdminService.saveAdmin(adminInfo).then(response => {
             if(response.status === 201){
                 setMessage("Admin Added Successfully. Admin ID : "+response.data.adminId);
             }

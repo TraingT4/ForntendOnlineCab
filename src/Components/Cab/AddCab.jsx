@@ -52,9 +52,10 @@ const AddCab = () => {
                             <input 
                                 className="form-control" 
                                 type="number" 
-                                { ...register("perKmRate", {required: true }) }    
+                                { ...register("perKmRate", {required: true ,min:0}) }    
                             />
-                            {errors.phoneNumber && errors.phoneNumber.type === "required" && <span className='error'>Phone Number is required</span>}
+                           {errors.perKmRate && errors.perKmRate.type === "required" && <span className='error'>Charge per KM is required</span>}
+                            {errors.perKmRate && errors.perKmRate.type === "min" && <span className='error'>Charge must be positive</span>}
                         </div>
                     </div>
                     <div className="row">

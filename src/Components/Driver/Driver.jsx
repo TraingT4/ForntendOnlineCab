@@ -16,7 +16,7 @@ const Driver = () => {
       DriverService.getDriver(id).then(response => {
         setDriver(response.data);
     }).catch(e => console.log("Exception while fetching driver info "+e));
-  });
+  },[]);
   return (
   
     <div>

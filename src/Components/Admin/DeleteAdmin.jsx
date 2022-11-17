@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-import AdminService from "../Services/AdminService";
-import Menu from "./Menu";
+import AdminService from "../../Services/AdminService";
+import Menu from "./../Home/Menu";
 
 
 
@@ -14,9 +14,7 @@ const DeleteCab = () => {
             if(response.status === 204){
                 setMessage("Deleted Admin Successfully. Admin Id:"+id);
             }
-        }).catch(error=>{
-            setMessage(error.response.data);
-         })});
+        })});
 
     return (
         <div>
@@ -25,7 +23,7 @@ const DeleteCab = () => {
            </div>
             <div className="container w-50 pt-5 broder rounded bg-warning p-5 mt-5">
                 <p className="success">{message}</p><br></br>
-                <a className="btn btn-success"href="/home">Go Back</a>
+                <a className="btn btn-success"href="/login">Go Back</a>
             </div>
         </div>    
     )

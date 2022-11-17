@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 
 export default function CallToAction() {
   return (
-
-    <section className="call-action">
-      <h4>Be where you want to be on time with our confort rides</h4>
+    <div>
+         <section className="container-fluid call-action">
+      <h4><b>Be where you want to be on time with our confort rides</b></h4>
       <p>
-        <Link className="btn btn-oval" to="/customerlogin">Book your ride</Link>
+        <Link className="btn btn-oval bg-success" to="/customerlogin"><b>Book your ride</b></Link>
       </p>
+      
     </section>
+    </div>
+   
 
   );
 }

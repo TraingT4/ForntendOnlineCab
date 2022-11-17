@@ -41,7 +41,7 @@ const Customers = () => {
                     </thead>
                     <tbody className="table-light">
                         {
-                            customers.map(cust => (
+                            customers.filter(cus=>(cus.username.toLowerCase().includes(searchStr.toLowerCase()) )).map(cust => (
                                 <tr>
                                     <td>{cust.customerId}</td>
                                     <td>{cust.email}</td>

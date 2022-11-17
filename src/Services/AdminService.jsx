@@ -9,7 +9,7 @@ class AdminService {
     {
         return axios.post(apiPath+"/",admin);
     }
-    updateAdmin( admin)
+    updateAdmin(admin)
     {
         return axios.put(apiPath+"/",admin);
     }
@@ -19,6 +19,10 @@ class AdminService {
     getAdmins()
     {
         return axios.get(apiPath+'/');
+    }
+    getAdminById(id)
+    {
+        return axios.get(apiPath+'/'+id);
     }
 }
 export default new AdminService;

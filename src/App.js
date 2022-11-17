@@ -6,6 +6,10 @@ import Login from './Components/Login/Login';
 import Logout from './Components/Login/Logout';
 import Home from './Components/Home/Home';
 import AdminHome from './Components/Admin/AdminHome';
+import Admins from './Components/Admin/Admins';
+import AddAdmin from './Components/Admin/AddAdmin';
+import UpdateAdmin from './Components/Admin/UpdateAdmin';
+import DeleteAdmin from './Components/Admin/DeleteAdmin';
 
 //Routing for Cab Components
 import CabHome from './Components/Cab/CabHome';
@@ -112,6 +116,10 @@ function App() {
             <Route path='/customerCabs' element={<CabDetailsForCustomer/>}></Route>
             <Route path='/tripbooking' element={<TripBookingHome />}></Route>
             <Route path='/viewtrips' element={<Trips />}></Route>
+            <Route path='/addAdmin' element={<AddAdmin />}></Route>
+            <Route path='/showAdmin' element={<Admins />}></Route>
+            <Route path='/updateAdmin/:id' element={ <UpdateAdmin />}></Route>
+            <Route path='/deleteAdmin/:id' element={ <DeleteAdmin />}></Route>
          </Routes>
          </BrowserRouter>
          <Footer />

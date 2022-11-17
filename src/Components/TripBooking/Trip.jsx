@@ -49,9 +49,7 @@ const Trip = () => {
                                     <tr>
                                         <th>Date:</th>
                                     </tr>
-                                    <tr>
-                                        <th>Status:</th>
-                                    </tr>
+                                    
                                 </table>
                             </td>
                             <td>
@@ -74,9 +72,7 @@ const Trip = () => {
                                     <tr>
                                         <td>{trip.status}</td>
                                     </tr>
-                                    <tr>
-                                        <td>{trip.status=== true ? 'Upcomming' : 'Finished'}</td>
-                                    </tr>
+                                   
                                 </table>
                             </td>
                         </tr>
